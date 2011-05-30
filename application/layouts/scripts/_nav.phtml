@@ -1,0 +1,14 @@
+<?php $auth =   Zend_Auth::getInstance()->hasIdentity() ?
+                Zend_Auth::getInstance()->getIdentity() :
+                NULL;
+?>
+
+<ul id="nav" class="container_12 clearfix" >
+<div class="grid_12">
+<?php if ($auth): ?>
+<li><a id="nav-auth" href="/auth/logout" title="" class=""><span>Log out</span></a></li>
+<?php else: ?>
+<li><a id="nav-auth" href="/auth/login" title="" class=""><span>Log in</span></a></li>
+<?php endif; ?>
+</div>
+</ul>

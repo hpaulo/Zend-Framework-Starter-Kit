@@ -1,0 +1,20 @@
+<div id="footer-inner" class="container_12 clearfix">
+<p>&copy;<?= date('Y'); ?></p>
+
+<div class="grid_8 alpha">
+
+</div>
+<div class="grid_4 icons">
+
+</div>
+</div>
+<div>
+
+<?php $auth = Zend_Auth::getInstance(); ?>
+<pre>
+<?php if ($auth->hasIdentity()) {
+    print_r($auth->getIdentity());
+}
+?>
+</div>
+
